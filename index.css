@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+
+
+body{
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  height: 50px;
+  width:120px;
+  font-size:16px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  position:relative; 
+  border: 2px solid #e0e0e0;
+  border-right: 30%;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius:5px;
+  color: #252526;
+  background-color: #e0e0e0;
+  letter-spacing: 3px;
+  text-transform:uppercase;
+  
+ }
+
+
+
+button::before{
+  content:'';
+height: 0px; /*  height will change up to max  when we hover it  */
+ width:0px; /*  width will change up to max when we hover it  */
+  background-color: #03b1fc;
+  position:absolute;
+  top:-7px;
+  left:-7px;
+  bottom:0;
+  right:0;
+  z-index:-1;
+  transition: 0.4s;
+   
+}
+
+button:hover:before{
+  height:100%;
+  width:100%;
+}
+
+
+button:after{
+  content:'';
+  height: 0px; /*  height will change up to max  when we hover it  */
+ width:0px; /*  width will change up to max when we hover it  */
+  background-color: #03b1fc;
+  position:absolute;
+  bottom:-7px;
+  right:-7px;
+  z-index:-1;
+  transition: 0.4s;
+}
+
+button:hover:after{
+  visibility:visible;
+  height:100%;
+  width:100%;
+}
